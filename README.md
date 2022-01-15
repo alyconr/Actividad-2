@@ -116,5 +116,6 @@ class Login {
 ```
 
 ## Ejercicio 5 
+    Asociar un Evento Click a un Elemento button con addEventListener
     
 
