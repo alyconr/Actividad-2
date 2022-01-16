@@ -1,6 +1,6 @@
 # Actividad-2
 Los objetivos de esta sesión son adquirir conocimientos avanzados del lenguaje de  programación y explorar las diferencias entre JavaScript y Typescript.
-[Solución Ejercicios ver](https://github.com/alyconr/Javascript-Course/blob/alydev/activity/2_session/index.js)
+[Solución Ejercicios Ver Repo](https://github.com/alyconr/Javascript-Course/blob/alydev/activity/2_session/index.js)
 
 ## Ejercicio 1
 
