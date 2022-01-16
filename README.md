@@ -1,6 +1,6 @@
 # Actividad-2
 Los objetivos de esta sesión son adquirir conocimientos avanzados del lenguaje de  programación y explorar las diferencias entre JavaScript y Typescript.
-
+[Solución Ejercicios ver](https://github.com/alyconr/Javascript-Course/blob/alydev/activity/2_session/index.js)
 
 ## Ejercicio 1
 
@@ -116,6 +116,55 @@ class Login {
 ```
 
 ## Ejercicio 5 
-    Asociar un Evento Click a un Elemento button con addEventListener
+   
+   
+En este ejercicio os voy a hacer mirar un poco de documentación extra. Y vamos a utilizar el fichero que se encuentra en activity/2_session/index.html.
+Crea dos clickListener, para los botones con id loginSuccess y loginFailure. En el primero crearemos un objeto login que sea correcto y llamaremos a la función para que de el resultado correcto. En el segundo crearemos un objeto login con parámetros incorrectos y llamaremos a login para que falle. 
+Para ello consulta los siguientes documentos.
+
+```bash
+document.getElementById("loginSuccess").addEventListener("click",logins,false);
+function logins (){
+  alert("correcto");
+}
+
+function cli () {
+  let usernames;
+  let passwords;
+      if ( this.usernames === "admin" && this.passwords === "passwd" ) { 
+          alert( "Usuario esta logueado");
+      }
+      else { 
+          alert("Usuario o password incorrecto");
+      }
+ // alert("incorrecto");
+}
+let login1 = new cli("admin ","passwd");
+document.getElementById("loginFailure").addEventListener("click",cli,false);
+```
+
+## Ejercicio 6
+
+En este ejercicio vamos a añadir asincronía al resto de botones:
+• Crea dos clickListener, para los botones con id loginSuccessAsync y loginFailureAsync. En el primero llamaremos a la función loginWithUsername
+para que de el resultado correcto. En el segundo llamaremos a la función con parámetros incorrectos. Os dejo un par de pistas para resolver el ejercicio.
+• Primero, addEventListener(‘click’, () => {}) no acepta asincronía ya que es una función síncrona. Pero es posible sustituir el segundo argumento () => {}, que es una función, por una función asíncrona (habría que añadir una palabra reservada que hemos visto).
+• loginWithUsername devuelve una promesa, que lanza una excepción si falla, por lo que habría que atrapar esa excepción para que nuestro programa no 
+falle
+
+```bash
+document.getElementById("loginSuccessAsync").addEventListener("click",loginWitUsername,false);
+let loginWitUsername = async (username, password) => {
+    return new Promise(function (resolve, rejected) {
+      setTimeout(() => {
+        if (username === "admin" && password === "passwd") {
+          resolve("User logged in");
+        } else {
+          rejected("Error: invalid username or password");
+        }
+      }, 200);
+    });
+};
+```
     
 
